@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации пользователя</title>
+    <style>
+        .form-container {
+            width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-label {
+            width: 100px;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+        .form-input {
+            flex-grow: 1;
+        }
+        .languages {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Форма регистрации пользователя</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label class="form-label" for="email">E-mail:</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="Введите ваш E-mail" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">Пароль:</label>
+                <input class="form-input" type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
+                <button type="button" onclick="togglePassword()">Показать/Скрыть пароль</button>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Пол:</label>
+                <input type="radio" name="gender" id="male" value="male" checked>
+                <label class="form-label" for="male">Мужской</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label class="form-label" for="female">Женский</label>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="birth-year">Год рождения:</label>
+                <select class="form-input" id="birth-year" name="birth-year">
+                    <option value="">Выберите год</option>
+                    <option value="1940">1940-й</option>
+                    <option value="1950">1950-й</option>
+                    <option value="1960">1960-й</option>
+                    <option value="1970">1970-й</option>
+                    <option value="1980">1980-й</option>
+                    <option value="1990">1990-й</option>
+                    <option value="2000">2000-й</option>
+                    <option value="2010">2010-й</option>
+                    <option value="2019">2020-й</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Я знаю:</label>
+                <div class="languages">
+                    <label><input type="checkbox" name="language" value="russian" checked disabled>Русский</label>
+                    <label><input type="checkbox" name="language" value="spanish">Испанский</label>
+                    <label><input type="checkbox" name="language" value="german">Немецкий</label>
+                    <label><input type="checkbox" name="language" value="english">Английский</label>
+                    <label><input type="checkbox" name="language" value="chinese">Китайский</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="about">О себе:</label>
+                <textarea class="form-input" id="about" name="about" rows="4" placeholder="Напишите о себе"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Готово</button>
+            </div>
+        </form>
+        <button type="button" onclick="resetForm()">Очистить</button>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('registration-form').reset();
+        }
+    </script>
+</body>
+</html>
