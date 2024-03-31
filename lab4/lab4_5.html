@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Оформление вертикального меню</title>
@@ -22,20 +23,23 @@
         }
 
         .menu li::before {
-            content: '\f147';
+            content: '\f0fe';
             font-family: FontAwesome;
             width: 16px;
             height: 16px;
             position: absolute;
             left: 10px;
+            
         }
 
         .menu li li {
             margin-left: -10px;
             position: relative;
+            display: none;
+            top:0;
         }
 
-        .menu li li::before {
+        .menu li li::before, .menu li li:hover::before {
             content: '\f192';
             font-family: FontAwesome;
             width: 16px;
@@ -44,15 +48,30 @@
             left: -20px;
         }
 
-       /* .menu li a {
+        .menu li a {
+            display: block;
+            color: #369;
         }
 
         .menu li a:hover {
         }
-*/
+
+        .menu li:hover li {
+            display:block;
+        }
+
+
+        .menu li:hover::before{
+            content: '\f147';
+            font-family: FontAwesome;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 10px;
+        }
+
     </style>
 </head>
-
 <body>
     <nav class="menu">
         <ul>

@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-		<meta charset="UTF-8">
-		<title>Оформление вертикального меню</title>
-		<style>
-			html {
-					background: #f0f0f0;
+	<meta charset="UTF-8">
+	<title>Оформление вертикального меню</title>
+	<style>
+		html {
+				background: #f0f0f0;
+		}
+		
+		.menu {
+				width: 250px;
+				background: #fff;
+		}
+		
+		.menu ul {
+			 list-style-image: url(pic/minus.gif);
+			 padding-left: -35px;
+			 margin-bottom: 10px;
+             padding-left: 30px;
+		}
+	/*		
+		.menu li {
+		}
+		
+		.menu li a {
 			}
 			
-			.menu {
-					width: 250px;
-					background: #fff;
-			}
+		.menu li a:hover {
+		}
+			*/
+		.menu li ul {
+			list-style-image: url(pic/point.gif);
+		}
 			
-			.menu ul {
-                
-			}
-			
-			.menu li {
-                list-style: none; /* Убираем исходные маркеры */
-                background: url(pic/minus.gif) no-repeat 0 4px; /* Параметры фона */
-                padding-left: 24px; /* Смещаем текст вправо */ 
-			}
-			
-			.menu li a {
-			}
-			
-			.menu li a:hover {
+		/* .menu li li {
 
-			}
-			
-			.menu li ul {
-			}
-			
-			.menu li li {
-                list-style: none; /* Убираем исходные маркеры */
-                background: url(pic/point.gif) no-repeat 0 4px; /* Параметры фона */
-                padding-left: 24px; /* Смещаем текст вправо */
-			}
+		} */
 	</style>
 </head>
 <body>
