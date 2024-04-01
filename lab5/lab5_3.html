@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Использование float при построении колонок</title>
     <style>
-        body {
-            min-width: 1040px;
+        .container {
+            min-width: 1020px;
         }
         
         #left,
@@ -35,9 +35,10 @@
         }
     </style>
 </head>
-<body>
-    <div id="left">left<br>left<br>left<br>left<br>left</div>
-    <div id="center">center text text text text text text text text text text text text text text text text text text
+<body style="font-size: 0">
+    <div class="container"></div>
+    <div id="left" style="font-size: 2rem">left<br>left<br>left<br>left<br>left</div>
+    <div id="center" style="font-size: 2rem">center text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
@@ -51,6 +52,6 @@
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text</div>
-    <div id="right">right<br>right<br>right<br>right</div>
+    <div id="right" style="font-size: 2rem">right<br>right<br>right<br>right</div>
 </body>
 </html>
