@@ -1,4 +1,4 @@
-import { fib } from "../lab2/lab2fib.js";
+import { fib } from "../lab2/lab2_1.js";
 
 /**
  * counts decrimal part of number
