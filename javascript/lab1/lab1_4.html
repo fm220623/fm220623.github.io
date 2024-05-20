@@ -13,7 +13,7 @@
                 if(num % i === 0) return false;
             return num > 1;
         }
-        var n = prompt("n: ")
+        var n = prompt("До какого числа искать простые числа?: ")
         for (let i = 2; i < n; i++)
             if(isPrime(i))
                 console.log(i)

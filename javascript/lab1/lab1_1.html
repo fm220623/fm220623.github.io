@@ -1,4 +1,4 @@
-~<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,14 +8,14 @@
 <body>
     <script>
         'use strict'
-        let age = prompt("Age:")
-        let gender = prompt("Gender: (F/M)")
+        let age = prompt("Возраст: ")
+        let gender = prompt("Мужчина или женщина?: (f/m)")
         if (age >= 0 && age <= 17)
             alert("Вам работать ещё рано — учитесь")
         else if (age >= 18)
-            if((age <= 59 && gender === "M") || (age <= 54 && gender === "F"))
+            if((age <= 59 && gender === "m") || (age <= 54 && gender === "f"))
                 alert("Вам ещё работать и работать")
-            else if((age >= 60 && gender === "M") || (age >= 55 && gender === "F"))
+            else if((age >= 60 && gender === "m") || (age >= 55 && gender === "f"))
                 alert("Скоро пенсия!")
             else alert("Да кто ты такой?")
         else alert("Да кто ты такой?")

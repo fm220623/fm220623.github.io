@@ -9,8 +9,8 @@
     <script>
         'use strict'
         var a = prompt("Введите число больше 100: ")
-        while(+a <= 100 && a!=null)
-            var a = prompt("Неверно")
+        while((isNaN(+a) || +a <= 100) && a!=null)
+            var a = prompt("Введите число больше 100")
     </script>
 </body>
 </html>
