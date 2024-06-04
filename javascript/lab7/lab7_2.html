@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         ::placeholder {
-        color: blue;
-    }
+            color: blue;
+        }
     </style>
 </head>
+
 <body>
-    <div id="div"></div>
-    <textarea id="textArea" placeholder="ur text" data-placeholder="aaa"></textarea>
+
+    <form id="form">
+        <label for="placeholder"></label>   
+        <input id="placeholder" type="text" data-placeholder="aaaaaa">
+    </form>
+    
     <script>
-        const t = document.getElementById("textArea")
-        const d = document.getElementById("div")
-        const ph = t.placeholder
-        const dph = t.dataset.placeholder
-        t.addEventListener("mouseover", function p1(){
-            t.placeholder=dph
-            d.innerText=ph
-        })
-        t.addEventListener("mouseout", function p2(){
-            if(!t.innerText){
-                d.innerText=""
-                t.placeholder=ph
-            }
-        })
+
+      let form = document.getElementById("form");
+      let formField = form.getElementsByTagName('input')[0];
+      let label = form.getElementsByTagName('label')[0];
+
+      label.style.visibility = 'hidden';
+
+      formField.setAttribute('placeholder', formField.dataset.placeholder);
+      label.innerHTML = formField.dataset.placeholder;
+
+      formField.addEventListener('focus', () => {
+          label.style.visibility = 'visible';
+          formField.setAttribute('placeholder', 'example@yandex.ru');
+      });
+
+      formField.addEventListener('blur', () => {
+          label.style.visibility = 'hidden';
+          formField.setAttribute('placeholder', formField.dataset.placeholder);
+          
+      });
+
     </script>
+
 </body>
 </html>
